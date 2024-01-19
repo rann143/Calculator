@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 
 .number-container, .operator-container {
@@ -24,7 +23,7 @@ body {
     margin: 20px;
 }
 
-.number, .operator {
+.number, .operator, #equal {
     border: solid 1px;
     border-color: black;
     width: 50px;
@@ -54,4 +53,8 @@ body {
 
 .red {
     background-color: rgb(252, 180, 180);
+}
+
+.yellow {
+    background-color: rgb(252, 252, 180);
 }
