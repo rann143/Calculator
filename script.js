@@ -51,20 +51,28 @@ function operate(firstNum, operator, secondNum) {
 
 }
 
-let displayVal = document.querySelector('.display');
-let clearBtn = document.querySelector('#clear');
+//variable for display
+const display = document.querySelector('.display');
 
-let oneBtn = document.querySelector('#one');
-let twoBtn = document.querySelector('#two');
+//variable for display value
+let displayVal = display.textContent;
 
+//variable for clear button
+const clearBtn = document.querySelector('#clear');
+
+//nodelist for all number buttons
+const numbers = document.querySelectorAll('div.number');
+
+//update display and display value with the respective numbers when
+//numbers are clicked
+numbers.forEach(number => {
+    number.addEventListener('click', event => {
+        display.textContent += number.textContent;
+        displayVal = display.textContent
+    })
+});
+
+//clear display when clicking clear button
 clearBtn.addEventListener('click', () => {
-    displayVal.textContent = "";
-})
-
-oneBtn.addEventListener('click', () => {
-    displayVal.textContent += oneBtn.textContent;
-})
-
-twoBtn.addEventListener('click', () => {
-    displayVal.textContent += twoBtn.textContent;
+    display.textContent = "";
 })
