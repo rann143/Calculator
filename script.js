@@ -50,3 +50,21 @@ function operate(firstNum, operator, secondNum) {
     }
 
 }
+
+let displayVal = document.querySelector('.display');
+let clearBtn = document.querySelector('#clear');
+
+let oneBtn = document.querySelector('#one');
+let twoBtn = document.querySelector('#two');
+
+clearBtn.addEventListener('click', () => {
+    displayVal.textContent = "";
+})
+
+oneBtn.addEventListener('click', () => {
+    displayVal.textContent += oneBtn.textContent;
+})
+
+twoBtn.addEventListener('click', () => {
+    displayVal.textContent += twoBtn.textContent;
+})
