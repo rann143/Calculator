@@ -70,9 +70,22 @@ numbers.forEach(number => {
         display.textContent += number.textContent;
         displayVal = display.textContent
     })
+
+    number.addEventListener('mousedown', event => {
+        number.classList.add('gray');
+    })
+    number.addEventListener('mouseup', event => {
+        number.classList.remove('gray');
+    })
 });
 
 //clear display when clicking clear button
 clearBtn.addEventListener('click', () => {
     display.textContent = "";
+})
+clearBtn.addEventListener('mousedown', event => {
+    clearBtn.classList.add('red');
+})
+clearBtn.addEventListener('mouseup', event => {
+    clearBtn.classList.remove('red');
 })

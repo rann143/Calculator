@@ -47,3 +47,11 @@ body {
     align-items: center;
     font-size: xx-large;
 }
+
+.gray {
+    background-color: rgb(223, 219, 219);
+}
+
+.red {
+    background-color: rgb(252, 180, 180);
+}
