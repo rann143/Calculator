@@ -23,7 +23,7 @@ body {
     margin: 20px;
 }
 
-.number, .operator, #equal {
+.number, .operator, #equal, #delete {
     border: solid 1px;
     border-color: black;
     width: 50px;

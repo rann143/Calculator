@@ -136,3 +136,12 @@ clearBtn.addEventListener('mouseup', event => {
     clearBtn.classList.remove('red');
 })
 
+
+const deleteBtn = document.querySelector('#delete');
+
+deleteBtn.addEventListener('click', event => {
+    display.textContent = display.textContent.split("")
+                                        .splice(0, display.textContent.length - 1)
+                                        .join("");
+    displayVal = display.textContent;
+})
