@@ -27,7 +27,7 @@ function divide(a, b) {
     let result = 0;
 
     if (b == 0) {
-        return "cant divide by zero";
+        return "You can't divide by zero";
     } else {
     result = a / b;
     }
@@ -75,6 +75,7 @@ numbers.forEach(number => {
     number.addEventListener('click', event => {
         display.textContent += number.textContent;
         displayVal = display.textContent;
+
     })
 
     number.addEventListener('mousedown', event => {
@@ -105,9 +106,18 @@ operators.forEach(operator => {
 
 equalSign.addEventListener('click', event => {
     secondNum = displayVal;
-    
-    console.log(operate(firstNum, operatorSign, secondNum));
-    display.textContent = operate(firstNum, operatorSign, secondNum);
+
+    if (Number.isInteger(operate(firstNum, operatorSign, secondNum)) == false 
+    && typeof operate(firstNum, operatorSign, secondNum) == 'number' ) {
+
+        display.textContent = operate(firstNum, operatorSign, secondNum).toFixed(2);
+
+    } else {
+
+        display.textContent = operate(firstNum, operatorSign, secondNum);
+
+    }
+
     displayVal = display.textContent;
     firstNum = displayVal; 
 })
