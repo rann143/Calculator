@@ -108,6 +108,8 @@ equalSign.addEventListener('click', event => {
     
     console.log(operate(firstNum, operatorSign, secondNum));
     display.textContent = operate(firstNum, operatorSign, secondNum);
+    displayVal = display.textContent;
+    firstNum = displayVal; 
 })
 
 //clear display when clicking clear button
