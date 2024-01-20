@@ -23,7 +23,7 @@ body {
     margin: 20px;
 }
 
-.number, .operator, #equal, #delete {
+.number, .operator, #equal, #delete, #decimal {
     border: solid 1px;
     border-color: black;
     width: 50px;
@@ -33,6 +33,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 .display {
     border: solid 1px;

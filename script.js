@@ -86,6 +86,20 @@ numbers.forEach(number => {
     })
 });
 
+//Decimal button functionality
+const decimalBtn = document.querySelector('#decimal');
+
+
+decimalBtn.addEventListener('click', event => {
+
+    if (display.textContent.includes(".") == false) {
+        display.textContent += decimalBtn.textContent;
+    } else if (display.textContent.includes(".") == true) {
+        display.textContent;
+    }
+
+})
+
 //change operators button color when pressing down
 operators.forEach(operator => {
 
@@ -136,12 +150,18 @@ clearBtn.addEventListener('mouseup', event => {
     clearBtn.classList.remove('red');
 })
 
-
+//Create variable for delete (backspace) button
 const deleteBtn = document.querySelector('#delete');
-
+//delete button functionality
 deleteBtn.addEventListener('click', event => {
     display.textContent = display.textContent.split("")
                                         .splice(0, display.textContent.length - 1)
                                         .join("");
     displayVal = display.textContent;
+})
+deleteBtn.addEventListener('mousedown', event => {
+    deleteBtn.classList.add('gray');
+})
+deleteBtn.addEventListener('mouseup', event => {
+    deleteBtn.classList.remove('gray');
 })
